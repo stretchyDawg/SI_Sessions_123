@@ -65,7 +65,7 @@ def circle(x, y, radius, fill_color):
     t.up()
     t.setheading(0)
 
-def abe_shape(x, y, ):
+# def abe_shape(x, y, ):
 
 def main():
     equilateral_triangle(0, 0, 100, "orange")
