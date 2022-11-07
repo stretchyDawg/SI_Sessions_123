@@ -39,7 +39,7 @@ def getNumbers(filename):
                     abe_array[array_index] = split_line[value]
                     array_index += 1
                 else:
-                    raise TypeError(split_line[value], "can not be ")
+                    raise TypeError(split_line[value], " is not a digit.")
 
     return abe_array
 
