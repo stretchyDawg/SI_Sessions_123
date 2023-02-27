@@ -16,7 +16,6 @@ def quesh_1(filename):
             tup_list.append(csv_tup)
     return tup_list
 
-
 """
 2. 
 Given the same csv file:
@@ -48,7 +47,7 @@ Return all of the words that are in both files as whatever data structure you fe
 def quesh_3(filename1, filename2):
     file1_words = []
     file2_words = []
-    word_tuple = (file1_words, file2_words)
+    words_in_both = []
     with open(filename1) as my_file:
         for line in my_file:
             line = line.split(" ")
@@ -56,11 +55,19 @@ def quesh_3(filename1, filename2):
                 file1_words.append(word)
     with open(filename2) as my_file:
         for line in my_file:
+            line = line.split(" ")
             for word in line:
                 file2_words.append(word)
-    return word_tuple
 
-
+    for word1 in file1_words:
+        in_both = False
+        for word2 in file2_words:
+            if word1 == word2:
+                in_both = True
+                break
+        words_in_both.append(word1)
+    
+    return words_in_both
         
 
 
