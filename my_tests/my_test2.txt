@@ -1,17 +1,15 @@
-1:
-
+1: MAKE UPPERCASE (Strings):
+Make a function that takes a string (with both lowercase and uppercase characters).
+Return that string but with all of the letters uppercase. 
 
 2:
 
 
-3:
-
-
-4: ARRAY SUM (Recursion):
+3: ARRAY SUM (Recursion & Arrays):
 Using a recursive function that takes an array of ints as a parameter, return the sum of all of the ints.
 Do NOT use loops.
 
-5: CSV CALCULATOR (CSV File Stuff):
+4: CSV CALCULATOR (CSV File Stuff):
 A csv organized text file named stuff.txt is organized as described:
 operation,value1,value2
 Iterate through the file, and perform the operation described in the first field on the two values. There are 4 valid operations, +, -, *, /, and they can be performed on float or int data types only. Raise errors accordingly.  
