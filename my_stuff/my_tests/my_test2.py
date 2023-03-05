@@ -1,14 +1,11 @@
-import my_stuff.arrays as arrays
-import my_stuff.array_utils as array_utils
+
 
 # MAKE UPPERCASE ANSWER:
 def print_file_uppercase(filename):
     with open(filename) as my_file:
         for line in my_file:
-            print()
+            print(line.upper())
             
-
-
 # ARRAY SUM ANSWER:
 def array_sum(array, index=0):
     if(index == len(array)-1):
@@ -44,8 +41,6 @@ def csv_calc(filename):
                 print("Error: INVALID DATA TYPES.")
     
 def main():
-    array = array_utils.range_array(1, 10)
-    print(array)
-    print(array_sum(array))
-
+    print()
+    
 main()

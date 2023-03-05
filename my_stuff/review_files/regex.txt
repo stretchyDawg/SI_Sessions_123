@@ -1,0 +1,34 @@
+def find_digits(a_str):
+    for match in re.findall("[0-9]+", a_str)
+    print(match)
+
+Expression Categories:
+'\d' Digit characters.
+'\D' Non-digits.
+'\s' Any whitespace.
+'\S' Non-whitespace.
+'\w' Word character (alphanumeric or underscore).
+'\W' Non-word character.
+
+Symbol Examples:
++ [0-9]+ - at least one digit.
+* [a-z]* - zero or more lowercase letters.
+? [A-Z]? - zero or one uppercase letter.
+{m,n} [.]{3,5} - 3 to 5 dots. n is optional.
+{m} x{5} - Exactly five x’s.
+
+
+Simple Regular Expressions:
+'\d' 'ab123?!'         '123'
+'\d\d' 'ab1223?!'      '12' '23'
+'7' '77787778'         '7' '7' '7' '7' '7' '7'
+'778' '77787778'       '778' '778'
+'\w' 'abc_123'         'a' 'b' 'c' '_' '1' '2' '3'
+'\D\d' 'abc_123'       '_1'
+
+Simple Class Expressions:
+Last names beginning with R, S, or T.    '[R-T]+[a-zA-Z]' or '[RST]+[a-zA-Z]'
+Phone numbers that may include a '-'.    '\d{3}-?\d{4}'
+5-digit zip codes.                       '\d{5}'
+Alphanumeric RIT email addresses.        '\w+@rit.edu'
+RIT student emails.                      '[a-zA-Z]{2-3}\d{4}@rit.edu'
