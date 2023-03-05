@@ -1,0 +1,76 @@
+1. Create a new Python module named "practicum" and define a function named 
+   "count_letters" that declares parameters for two strings.
+
+   Your function should count the number of times that each letter in the first 
+   string appears in the second. Your function should match both upper and 
+   lowercase letters. You may assume that each letter appears only once in the 
+   first string.
+
+   For example, given the strings "aeiou" and "Abraham Lincoln" your function 
+   should return 5 because the letter "a" appears 3 times, "i" appears 1 time, 
+   and "o" appears one time: 3 + 1 + 1 = 5.
+
+   Use the provided pytest unit test to test your code.
+
+   HINT: you may find it very useful to write at least one helper function!
+
+2. Take a moment to examine the "comics.csv" file that has been provided to you
+   in the data directory. Note that the first line is a header with descriptive
+   names for each column in the file.
+
+   Define a function named "count_comics" in the practicum module. It should 
+   declare parameters for a filename and a creator. The function should count 
+   and return the number of comics in the CSV file that were created by the 
+   specified creator.
+
+   Note that most/all of the comics in the file list more than one creator 
+   separated by "|". For example, "Gene Colan" is found in 
+   "Stan Lee|Gene Colan|Richard Bache Ayers". Your function needs to be able to
+   handle this.
+
+   You do not need to worry about handling any errors on this problem. Use the 
+   pytest unit test that has been provided to you to test your code.
+
+3. Define a function named "make_array" in the practicum module. The function 
+   should prompt the user to enter a size and then make an array of the 
+   appropriate size. You may assume that the user enters a valid, non-negative
+   integer. Use a loop to prompt the user to enter numeric values and store 
+   the values in the array in the same order that they are entered. If the user
+   enters a non-numeric value, print an error message and continue prompting 
+   them until they have entered enough values to fill the array.
+
+   The function should RETURN the array.
+
+   You WILL NOT use the provided pytest unit test to test this function. 
+   Instead, define a main function and use it to manually test your make_array 
+   function. You should print the array that is returned by the function. Of 
+   course the values that the user enters will change from one run to the next,
+   but you should otherwise try to match the output below as closely as 
+   possible.
+
+   enter size: 5
+   enter value: 12.34
+   enter value: 3.14159
+   enter value: a
+   a is not a numeric value. Try again.
+   enter value: "123"
+   "123" is not a numeric value. Try again.
+   enter value: 123
+   enter value: -47
+   enter value: 12.6
+   [12.34, 3.14159, 123.0, -47.0, 12.6]
+
+4. Define a function named "array_sum" that declares parameters for an array, a
+   start index, and an end index. Use recursion to implement the following 
+   formula to compute the sum of the values in an array:
+
+      S(A, start, end) = 0 when start > end
+      S(A, start, end) = A[start] when start == end
+      S(A, start, end) = S(A, start, mid) + S(A, mid+1, end)
+
+   You should recall from implementing binary search that mid = (start + end) // 2
+
+   DO NOT use a loop in your implementation. If you do so, you will not receive
+   credit for this problem.
+
+   Use the provided pytest unit test to test your implementation.

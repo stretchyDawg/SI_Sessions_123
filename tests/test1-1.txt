@@ -1,0 +1,53 @@
+1. According to the American Kennel Club (AKC) a dog's approximate age in 
+   human years can be determined using the following formula:
+
+   - The first year of a dog's life equals 15 human years
+   - The second year of a dog's life equals 9 human years
+   - Each year after that equals 5 human years
+
+   Example: A dog whose age is 7 would be be 49 (15 + 9 + 5 + 5 + 5 + 5 + 5) in
+            human years
+
+   Create a new Python module in a file named "ages.py" and define a function 
+   named "human_years" that declares a parameter for a dog's age in years and 
+   return's a dog's approximate age in human years according to the formula 
+   above. If the dog's age is less than 0, your function should return None.
+
+   Define a main method to manually test your function by calling it with 
+   several different dog ages and printing the results.
+
+   Hint: you are strongly encouraged to use incremental development to solve 
+   this problem rather than trying to implement the entire function all at 
+   once. You may want to consider writing the unit test required for #3 as you
+   go.
+
+
+2. In the same module, define a function named "dog_years" that declares a 
+   parameter for a human's age in years and returns the human's approximate age
+   in dog years according to the formula above (in reverse). You can assume 
+   that the provided age is an integer. If the provided age does not correspond
+   with an exact age in dog years you should round down to the nearest integer. 
+   
+   For example, a human that is 64 would be exactly 10 in dog years. A human 
+   that is 67 would also be 10 in dog years (rounded down).
+
+   Update your main to manually test this new function. Hint: if you pass the
+   results of your "dog_years" back into the "human_years" function you should
+   get the original ages back.
+
+   Hint: you are strongly encouraged to use incremental development to solve 
+   this problem rather than trying to implement the entire function all at 
+   once. You may want to consider writing the unit test required for #3 as you
+   go.
+
+
+3. Create a new Pytest unit test for the "ages" module and write as many tests
+   as you think are necessary to fully test the functions therein. If any of 
+   your tests fail, use the feedback from Pytest to fix your code!
+
+   Your tests will be expected to exemplify the qualities of a good test.
+
+
+4. You will find the instructions for the last problem in the comments at the
+   top of the "bb/bouncing_balls.py" module.
+
