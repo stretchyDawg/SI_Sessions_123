@@ -1,5 +1,12 @@
-import arrays
-import array_utils
+import my_stuff.arrays as arrays
+import my_stuff.array_utils as array_utils
+
+# MAKE UPPERCASE ANSWER:
+def print_file_uppercase(filename):
+    with open(filename) as my_file:
+        for line in my_file:
+            print()
+            
 
 
 # ARRAY SUM ANSWER:

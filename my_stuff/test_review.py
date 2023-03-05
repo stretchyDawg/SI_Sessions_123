@@ -12,8 +12,8 @@
 #write a recursive function that counts down from a given value and prints the number. 
 #Example, given the number 10, the function would print 10 9 8 7 6 5 4 3 2 1.
 
-import arrays
-import array_utils
+import my_stuff.arrays as arrays
+import my_stuff.array_utils as array_utils
 
 """
 Question 1
