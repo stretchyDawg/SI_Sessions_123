@@ -1,4 +1,4 @@
-import my_stuff.arrays as arrays
+import arrays
 import random
 
 def range_array(start, stop, step=1):

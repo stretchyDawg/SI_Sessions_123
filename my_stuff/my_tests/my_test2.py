@@ -1,4 +1,4 @@
-
+import array_utils
 
 # MAKE UPPERCASE ANSWER:
 def print_file_uppercase(filename):
@@ -41,6 +41,10 @@ def csv_calc(filename):
                 print("Error: INVALID DATA TYPES.")
     
 def main():
-    print()
+    array = array_utils.range_array(1, 11)
+    print(array)
+    print(array_sum(array))
+
+    print_file_uppercase("data/alice.txt")
     
 main()
