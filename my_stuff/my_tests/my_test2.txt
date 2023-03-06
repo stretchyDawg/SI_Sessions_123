@@ -1,16 +1,26 @@
 1: MAKE FILE UPPERCASE (Strings & Files):
-Make a function that takes a string (with both lowercase and uppercase characters).
-Return that string but with all of the letters uppercase. (Assume there will be no errors in this case question).
+Make a function that iterates through a file (with both lowercase and uppercase characters).
+Print that file but with all of the letters uppercase. (Assume there will be no errors in this question).
 
 2: ARRAY SUM (Recursion & Arrays):
 Using a recursive function that takes an array of ints as a parameter, return the sum of all of the ints.
-Do NOT use loops.
+Do NOT use loops.  (Assume there will be no errors in this question).
 
-3: CSV CALCULATOR (CSV File Stuff):
+3: CSV CALCULATOR (CSV Files):
 A csv organized text file named stuff.txt is organized as described:
-operation,value1,value2
+operation,value1,value2 
+Iterate through the file, and perform the operation described in the first field on the two values. There are ONLY 4 valid operations, +, -, *, /, and they can be performed on float or int data types only. 
+HANDLE ALL ERRORS!!!!
 
-Iterate through the file, and perform the operation described in the first field on the two values. There are 4 valid operations, +, -, *, /, and they can be performed on float or int data types only. Raise errors accordingly.  
+4: ARRAY OF DATA (Arrays and CSV Files):
+A csv file is organized as described:
+Line 1: student_name,passed_test_1,passed_test_2,passed_test_3,passed_test_4
+Line 2: bruce,false,true,true,false
+Line 3: bobby,true,false,true,false
+Etc…
+Create a function that, given a filename and a test number (1-4) as parameters, returns an array of all the student names that passed. 
+Then, make a main file that prints every student in that array, and print the amount of students that have passed the exam passed in as a parameter.  
+
 
 operator,value1,value2
 +,10,2

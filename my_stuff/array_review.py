@@ -1,4 +1,4 @@
-import my_stuff.arrays as arrays
+import arrays as arrays
 
 def print_values(an_array):
     for index in range(len(an_array)):
