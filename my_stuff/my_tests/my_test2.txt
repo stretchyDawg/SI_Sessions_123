@@ -1,3 +1,9 @@
+Test 2 Topics:
+- Strings
+- Files
+- Arrays
+- Recursion
+
 1: MAKE FILE UPPERCASE (Strings & Files):
 Make a function that iterates through a file (with both lowercase and uppercase characters).
 Print that file but with all of the letters uppercase. (Assume there will be no errors in this question).
