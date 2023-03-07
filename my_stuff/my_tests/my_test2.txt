@@ -27,6 +27,8 @@ Etc…
 Create a function that, given a filename and a test number (1-4) as parameters, returns an array of all the student names that passed. 
 Then, make a main file that prints every student in that array, and print the amount of students that have passed the exam passed in as a parameter.  
 
+5: BINARY SEARCH (Recursion and an understanding of searches):
+Implement a binary search. 
 
 operator,value1,value2
 +,10,2
