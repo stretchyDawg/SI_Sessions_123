@@ -85,10 +85,10 @@ def binary_search(array, target, start=None, end=None):
 
     
 def main():
-    array = array_utils.range_array(1, 11)
-    print(array)
-    print(array_sum(array))
+    # array = array_utils.range_array(1, 11)
+    # print(array)
+    # print(array_sum(array))
 
-    print_file_uppercase("data/christian.txt")
+    print_file_uppercase("data/alice.txt")
     
 main()
