@@ -25,7 +25,5 @@ def main():
     elif delete == "no":
         print("Did not deleted Mason's Roblox account!")
 
-
-
 if __name__ == "__main__":
     main()
