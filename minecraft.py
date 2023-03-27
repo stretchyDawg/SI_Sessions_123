@@ -34,7 +34,7 @@ def print_minecrafter(minecrafter):
 def main():
     name = "Christian"
     health = 10
-    inventory = [1, 3, 5]
+    inventory = ["rose", 3, True]
     is_dead = False
     me = create_minecrafter(name, health, inventory, is_dead)
     print_minecrafter(me)

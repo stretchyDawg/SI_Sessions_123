@@ -15,10 +15,6 @@ def hourly_wages():
     except:
         print("ERROR: Please insert a digit.")
 
-
-
-
-
 def main():
     hourly_wages()
 
