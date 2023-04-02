@@ -73,6 +73,32 @@ def search_book(library, given_book):
                     return True
     return False
 
+def make_customer(name, money_balance):
+    """
+    5: Make a function make_customer() that creates a data structure representation of a 
+    customer. A customer should have a wallet and a cart to be able to buy a certain amount 
+    of books, that cart can only hold at max 5 unique books.
+    """
+    cart = set()
+    return [name, money_balance, cart]
+
+def add_money(customer, money):
+    """
+    5.1: Make two functions, add_money() and subtract_money() that add and subtract the money of a given user. 
+    """
+    customer[1] += money
+
+def remove_money(customer, money):
+    """
+    5.1: Make two functions, add_money() and subtract_money() that add and subtract the money of a given user. 
+    """
+    customer[1] += money
+    if customer[1] < 0:
+        customer[1] = 0
+
+
+
+
 def main():
     # Books
     book1 = make_book("poop", "me", "Fiction", 2.99)
@@ -99,6 +125,16 @@ def main():
     library1 = library(fiction_shelf, fiction_shelf2, non_fiction_shelf)
     for key in library1:
         print("Genre: ", key, "\nBooks: ", library1[key], sep = "", end = "\n\n")
+
+    # Search function
+    book5 = make_book("poop4: Dog Days", "me", "Fiction", 2.99)
+    print("Book 4:", search_book(library1, book4))
+    print("Book 5:", search_book(library1, book5), end = "\n\n")
+
+
+
+
+
 
     
 
