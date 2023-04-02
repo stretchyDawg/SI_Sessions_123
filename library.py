@@ -43,7 +43,7 @@ def library(shelf1, shelf2, shelf3):
     """
     3: Make a function library() that creates a library. A library is a collection of shelves. 
     We will discuss the parameters and data structures used! (For the purpose of this assignment
-    you need at least 3 shelves when making a book).
+    you need 3 shelves when making a library).
 
     In this case, a library is a dictionary: {Key=Shelf_Genre : Value=List_Of_Shelves}
     """
@@ -80,7 +80,8 @@ def make_customer(name, money_balance):
     of books, that cart can only hold at max 5 unique books.
     """
     cart = set()
-    return [name, money_balance, cart]
+    books = []
+    return [name, money_balance, cart, books]
 
 def add_money(customer, money):
     """
@@ -92,9 +93,59 @@ def remove_money(customer, money):
     """
     5.1: Make two functions, add_money() and subtract_money() that add and subtract the money of a given user. 
     """
-    customer[1] += money
+    customer[1] -= money
     if customer[1] < 0:
         customer[1] = 0
+
+def add_book_to_cart(library, customer, book):
+    """
+    6: Make an add_book_to_cart() function that adds a book to a cart from a library. Search the library for a book, add it 
+    to the cart and remove it from the library. If the book is not found then print the problem.
+    """
+    found_book = search_book(library, book)
+    if(found_book == True):
+        genre = book[2]
+        for shelf in library[genre]:
+            for index in range(len(shelf)):
+                item = shelf[index]
+                if book == item:
+                    customer[2].add(book)
+                    shelf.pop(index)
+                    break
+    else:
+        print("Book not found in library.")
+
+def check_out(customer):
+    """
+    7: Make a buy_cart() that buys all books in a cart and empties the cart. If the user can not afford the 
+    cart then print a message stating the problem.
+    """
+    balance = customer[1]
+    cart = customer[2]
+    cost = 0.0
+
+    for book in cart:
+        cost += book[3]
+
+    if balance < cost:
+        print("ERROR: Not enough money!")
+    else:
+        for book in cart:
+            customer[3].append(book)
+            customer[2] = set()
+            remove_money(customer, cost)
+        print("Successfully bought books!")
+
+def print_customer(customer):
+    print("Name:", customer[0])
+    print("Balance:", customer[1])
+    print("Cart:")
+    for book in customer[2]:
+        print("\t", book)
+    print("Books:")
+    for book in customer[3]:
+        print("\t", book)
+        
 
 
 
@@ -130,6 +181,40 @@ def main():
     book5 = make_book("poop4: Dog Days", "me", "Fiction", 2.99)
     print("Book 4:", search_book(library1, book4))
     print("Book 5:", search_book(library1, book5), end = "\n\n")
+
+    # Customer data type
+    christian = make_customer("Christian", 100.00)
+    print_customer(christian)
+    print()
+    add_money(christian, 20.25)
+    print_customer(christian)
+    print()
+    remove_money(christian, 15.5)
+    print_customer(christian)
+    print()
+
+    # Add book to cart function
+    print("Library before:", library1, end = "\n\n")
+    add_book_to_cart(library1, christian, book4)
+    add_book_to_cart(library1, christian, book2)
+    add_book_to_cart(library1, christian, book2)
+    print_customer(christian)
+    print("\nLibrary after:", library1)
+
+    # Buy cart function
+    remove_money(christian, 134)
+    print()
+    print_customer(christian)
+    check_out(christian) #ERROR: Not enough money
+    print()
+    add_money(christian, 1434.43)
+    check_out(christian)
+    print_customer(christian)
+    print()
+    add_book_to_cart(library1, christian, book3)
+    print_customer(christian)
+    print()
+
 
 
 
