@@ -70,6 +70,15 @@ def genre_search(booklist, genre):
     return found_books
 
 def word_dictionary(filename):
+    '''
+    4: WORD DICTIONARY
+    Given a filename to a text file, return a dictionary of each 
+    word and its word count in this key/value form:
+    {Word : Word Count}
+
+    The words are NOT case sensitive (i.e. 'The' and 'the' are the
+    same thing.)
+    '''
     with open(filename) as my_file:
         word_dict = dict()
         for line in my_file:
@@ -130,5 +139,6 @@ def main():
     set2 = {2, 4, 6, 8, 10, 12, 14}
     print("union:", union(set1, set2))
     print("intersection:", intersection(set1, set2))
+    
 if __name__ == "__main__":
     main()
