@@ -1,0 +1,56 @@
+1.1: SET THEORY - UNION
+Given two sets, write a function that returns the union of
+those two sets.
+1.2: SET THEORY - INTERSECTION
+Given two sets, write a function that returns the intersection of
+those two sets.
+
+
+2: HIGHEST GRADE
+Write a Python function that takes in a list of tuples, 
+where each tuple represents a student's name and their 
+final grade in a course. The function should return the 
+name of the student with the highest grade. 
+
+For example, if the input list is: 
+[('Alice', 85), ('Bob', 92), ('Charlie', 77)], the function should return 'Bob'.
+
+
+3: BOOK GENRE SEARCH
+Write a Python function that takes in a list of tuples 
+representing books in this form: 
+(name, author, genre)
+
+Given a genre, the function should return a collection of 
+unique books of that genre (which is passed to the function 
+as a parameter).
+
+
+4: WORD DICTIONARY
+Given a filename to a text file, return a dictionary of each 
+word and its word count in this key/value form:
+{Word : Word Count}
+
+The words are NOT case sensitive (i.e. 'The' and 'the' are the
+same thing.)
+
+
+5.1: COMMUNE SKILL ASSIGNMENT
+Iterate through a CSV file of workers in this form:
+name, age, skill1, skill2, skill3, proficiency
+
+Return a collection of tuples of workers in this form:
+(name, age, proficiency, collection of skills)
+MUST BE EXACTLY IN THIS FORM ^
+5.2: COMMUNE JOB ASSIGNMENT 
+Given this collection of tuples, return a dictionary
+representing workers in this form:
+{proficiency : collection of workers (as tuples)}
+
+
+
+
+
+
+
+

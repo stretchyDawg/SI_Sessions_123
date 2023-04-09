@@ -26,7 +26,8 @@ you. Feel free to write helper functions as needed.
    If you cannot figure out how to get one of the tests to pass, comment it 
    out.
 
-1. The Euclidean Distance between two points is the length of the line segment
+1. SEQUENCES & INDEXES
+   The Euclidean Distance between two points is the length of the line segment
    connecting the two points. Given two points (x1, y1) and (x2, y2), the 
    Euclidean Distance d can be computed as follows:
 
