@@ -96,9 +96,6 @@ def main():
     print(stack2)
     print()
 
-
-
-
-
-main()
+if __name__ == "__main__":
+    main()
     

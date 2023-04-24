@@ -1,7 +1,7 @@
 
 import node
 
-class Queue:
+class NodeQueue:
     __slots__ = ['__size', '__front', '__back']
 
     def __init__(self):
@@ -70,3 +70,9 @@ class Queue:
                 self.__back = None
             
             return value
+
+def main():
+    pass
+
+if __name__ == "__main__":
+    main()
