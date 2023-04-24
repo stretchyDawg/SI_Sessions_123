@@ -1,3 +1,10 @@
+"""
+Spotify Coded by my SI Spring '23 Regulars :)
+@ChristianMorgado'sRegulars
+
+__str__ functions coded by me to manually test in main
+"""
+
 class Song:
     __slots__ = ["__name", "__author", "__album", "__duration"]
 
