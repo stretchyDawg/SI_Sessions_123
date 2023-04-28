@@ -1,8 +1,8 @@
 """
 Spotify Coded by my SI Spring '23 Regulars :)
-@ChristianMorgado'sRegulars
+By: Christian Morgado's SI Session Attendees
 
-__str__ functions coded by me to manually test in main
+__str__ functions coded by me to manually test in main :p
 """
 
 class Song:
