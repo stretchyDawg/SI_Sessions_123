@@ -46,12 +46,12 @@ class Playlist:
                 break
 
     def __str__(self):
-        string = "["
+        string = "name: " + self.__name + "\nAuthor: " + self.__author + "\n["
         for index in range(len(self.__songs)):
             string += str(self.__songs[index])
             if(index != len(self.__songs)-1):
                 string += ", "
-        return string + "]"
+        return string + "]\n"
 
 
 def main():
