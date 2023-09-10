@@ -14,17 +14,26 @@ class Song:
         self.__album = album
         self.__duration = duration
 
+    def setName(self, name):
+        self.__name = name
+
     def getDuration(self):
         return self.__duration
 
     def __eq__(self, other):
-        if type(self) == type(other):   #The type() function returns the TYPE of the object you are using
-            return (self.__name == other.__name) and (self.__author == other.__author) and (self.__album == other.__album) and (self.__duration == other.__duration) 
+        if type(self) == type(other):   
+            return (self.__name == other.__name) and \
+                   (self.__author == other.__author) and \
+                   (self.__album == other.__album) and \
+                   (self.__duration == other.__duration) 
         else:
             return False
         
     def __str__(self):
         return self.__name + " by: " + self.__author
+    
+# If you're wondering, yes this is the Song class we 
+# made in our SI Session :)
         
 class Playlist:
     __slots__ = ["__name", "__songs", "__author", "__duration"]
