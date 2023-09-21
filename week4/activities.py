@@ -1,4 +1,5 @@
 import random
+import example
 
 def is_negative(x):
     if x >= 0:
@@ -39,15 +40,16 @@ def monopoly_roll():
         return (one + two + three + four)
     return (one + two)
 
+def error_example(x, y):
+    z = example.subtract_numbers(x, y)
+    return z
+
 def main():
-    print("You rolled", roll_dice(6))
-
-    roll = monopoly_roll()
-    if roll == 0:
-        print("You go to jail!")
-    else:
-        print("You rolled", roll)
-
+    x = 5
+    y = 6
+    z = error_example(x, y)
+    print(z)
+    
 if __name__ == "__main__":
     main()
 
