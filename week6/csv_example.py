@@ -6,3 +6,6 @@ def names_and_addresses(csv_filename):
         next(csv_reader)
         for record in csv_file:
             print(record[0]) # <-- fields here
+
+def main():
+    pass
