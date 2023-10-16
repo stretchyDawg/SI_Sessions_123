@@ -1,6 +1,9 @@
+import arrays
+
 """
 GCIS-123 SI Recursion Activities
-Last updated: February 2023
+Created: February 2023
+Last updated: October 2023 (occurances question)
 
 By: Christian Morgado
 """
@@ -35,6 +38,7 @@ def fibonacci(n):
 """
 SUM OF DIGITS:
 Develop a program that calculates the sum of the digits of a positive integer using recursion. Note: this involves a bit of math
+BTW this one is REALLY hard.
 
 For example, if the user enters '12345,' your program should add the digits together: 1 + 2 + 3 + 4 + 5, and return the sum, which is 15.
 """
@@ -45,6 +49,22 @@ def sum_of_digits(n):
         last_digit = n % 10
         remaining_digits = n // 10
         return last_digit + sum_of_digits(remaining_digits)
+    
+"""
+OCCURANCES
+Develop a program that uses recursion to find the amount of occurances of a target value in a given array.
+
+For example, if the array is [1, 3, 6, 2, 3, 3, 5, 3] and the target value is 3 it would return 4.
+"""
+def occur(array, target, index=0, occurances=0):
+    if index >= len(array):
+        return occurances
+    else:
+        value = array[index]
+        if value == target:
+            return occur(array, target, index+1, occurances+1)
+        elif value != target:                                
+            return occur(array, target, index+1, occurances)
 
 def main():
     # This main function uses f-strings. You aren't taught this in GCIS-123 but it just makes it easier when visualizing code.
@@ -62,6 +82,15 @@ def main():
     number = 12345          # Replace with any positive integer
     result = sum_of_digits(number)
     print(f"The sum of the digits of {number} is {result}")
-
+    
+    array = arrays.Array(5, 0)
+    array[0] = 3
+    array[1] = 2
+    array[2] = 1
+    array[3] = 3
+    array[4] = 5
+    target = 3              # Find how many times 3 is in the array
+    occurances = occur(array, 3)
+    print(f"The target value {target} is in the array {occurances} time(s)")
 if __name__ == "__main__":
     main()
