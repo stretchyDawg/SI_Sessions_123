@@ -1,1 +1,0 @@
-week 7 is searches which is mostly graphs and time complexity.
