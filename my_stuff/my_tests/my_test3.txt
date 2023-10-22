@@ -42,6 +42,7 @@ name, age, skill1, skill2, skill3, proficiency
 Return a collection of tuples of workers in this form:
 (name, age, proficiency, collection of skills)
 MUST BE EXACTLY IN THIS FORM ^
+
 5.2: COMMUNE JOB ASSIGNMENT 
 Given this collection of tuples, return a dictionary
 representing workers in this form:

@@ -1,4 +1,15 @@
-def for_comp():
+"""
+LIST COMPREHENSION PART 1:
+Identify the lists that these list comprehension statements make:
+
+1: v = [letter for letter in “I love SI!”]
+2: w = [x for x in range(11)]
+3: x = [x+1 for x in range(11)]
+4: y = [x for x in range(11) if x % 2 == 0]
+5: z = [chr(ord(letter)+1) for letter in "foobar"]
+"""
+
+def for_loop_comprehension():
     """
     Make a list comprehension statement AND a for loop that follows this prompt:
     Give me all of the odd values between 1 and 10
@@ -27,18 +38,20 @@ def activities():
     print(x3)
 
 def main():
+    # Uncomment this portion for the answers to part 1:
     # v = [letter for letter in "I love SI!"]
     # w = [x for x in range(11)]
     # x = [x+1 for x in range(11)]
     # y = [x for x in range(11) if x % 2 == 0]
     # z = [chr(ord(letter)+1) for letter in "foobar"]
     # lists = [v, w, x, y, z]
-    print()
+    # print()
     # for lst in lists:
     #     print(lst)
+    print()
     activities()
     print()
-    for_comp()
+    for_loop_comprehension()
 
 
 

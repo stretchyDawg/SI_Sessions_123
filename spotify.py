@@ -1,5 +1,5 @@
 """
-Spotify Assignment REMASTERED
+Spotify Assignment
 @ChristianMorgado Spring Semester 23
 
 PROMPTS (what I will send them in the discord):
