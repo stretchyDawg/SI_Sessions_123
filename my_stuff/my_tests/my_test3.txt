@@ -1,6 +1,7 @@
 1.1: SET THEORY - UNION
 Given two sets, write a function that returns the union of
 those two sets.
+
 1.2: SET THEORY - INTERSECTION
 Given two sets, write a function that returns the intersection of
 those two sets.
@@ -36,7 +37,7 @@ same thing.)
 
 
 5.1: COMMUNE SKILL ASSIGNMENT
-Iterate through a CSV file of workers in this form:
+Iterate through a CSV file of workers in a commune in this form:
 name, age, skill1, skill2, skill3, proficiency
 
 Return a collection of tuples of workers in this form:

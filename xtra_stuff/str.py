@@ -1,8 +1,8 @@
 def main():
     fariha = "i like apples"
-    rachel = fariha.replace("apples", "bananas")
+    josh = fariha.replace("apples", "bananas")
     print("Original:", fariha)
-    print("Replace:", rachel)
+    print("Replace:", josh)
 
     ashton = "Im gonna FART"
     irwin = ashton.replace("FART", "poop")
