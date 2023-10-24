@@ -1,0 +1,33 @@
+df  -list drives
+cd     -open directories
+    '~' default directory
+    '-' back
+    '..' move up one directory
+    'tab'     -auto complete
+    *     -used to specify a fill-in the blank (*.txt for all text files, *y* for all files with a y)
+
+vi     -create or edit file
+    'i' insert
+    'esc' escape
+    ':x' save and exit
+
+l    -"long"
+ls     -list
+la     -all
+(ls -la)     -list all files
+cp    -copy
+mv    -move
+mkdir     -make directory
+rm    -remove/delete file permanently
+ls --help    -help manual
+git clone     -download repository
+git add     -move to Staging Area
+git commit     -move to local repository
+git push     -move to remote repository
+git status     -track files
+git log     -saves contents of log file and history of commits
+">"         -redirect operator
+cat         -prints entire contents of file to cmd line (cat output.txt)
+tail         -print last 10 lines of cmd line
+-n          -print last 'n' lines, used with tail command ('tail -n # ?.txt')
+git checkout <hash> [filename]    -restores versions using hash from git logs

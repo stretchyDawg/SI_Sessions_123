@@ -1,7 +1,6 @@
 """
 Implement your solution to the practicum in this file.
 
-@author Christian Morgado
 """
 PHONETIC_ALPHABET = ["Alpha", "Bravo", "Charlie", "Delta", "Echo", "Foxtrot",
     "Golf", "Hotel", "India", "Juliett", "Kilo", "Lima", "Mike", "November", 

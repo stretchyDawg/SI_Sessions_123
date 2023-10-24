@@ -1,6 +1,6 @@
 def main():
     """
-    expression for item in sequence
+    expression (for item in sequence) if condition
     """
     
     x = [n for n in range(1, 11)]
