@@ -54,9 +54,7 @@ def count_comics(filename, given_creator):
             
 def cast_to_int(a_string, index=0, multiplier=None):
     if multiplier == None:
-        multiplier = 1
-        for _ in range(len(a_string)-1):
-            multiplier = multiplier*10
+        multiplier = 10**(len(a_string)-1)
     
     if index == len(a_string):
         return 0
@@ -67,7 +65,8 @@ def cast_to_int(a_string, index=0, multiplier=None):
     
             
 def main():
-    test = cast_to_int("1234")
+    test = cast_to_int("")
+    print(test)
 
 if __name__ == "__main__":
     main()
