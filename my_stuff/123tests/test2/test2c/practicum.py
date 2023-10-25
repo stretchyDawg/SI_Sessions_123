@@ -62,10 +62,8 @@ def cast_to_int(a_string, index=0, multiplier=None):
         if ord(a_string[index]) == ASCII_ARRAY[ascii_index]:
             return (ascii_index*multiplier) + cast_to_int(a_string, index+1, multiplier/10)
         
-    
-            
 def main():
-    test = cast_to_int("")
+    test = cast_to_int("1234")
     print(test)
 
 if __name__ == "__main__":
