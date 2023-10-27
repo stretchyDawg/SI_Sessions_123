@@ -1,3 +1,5 @@
+
+
 def swap(a_list, index1, index2):
     temp = a_list[index1]
     a_list[index1] = a_list[index2]
@@ -8,6 +10,16 @@ def shift(a_list, index):
         swap(a_list, index, index-1)
         index -= 1
 
+def insertion_sort(a_list):
+    for index in range(len(a_list)):
+        shift(a_list, index)
+        
+        
+        
+        
+        
+        
+        
 def shift_wo_swap(a_list, index):
     hold = a_list[index]
     hold_index = index
@@ -16,10 +28,6 @@ def shift_wo_swap(a_list, index):
         hold_index -= 1
     a_list[hold_index] = hold
     
-def insertion_sort(a_list):
-    for index in range(len(a_list)):
-        shift(a_list, index)
-        
 def insertion_sort_wo_swap(a_list):
     for index in range(len(a_list)):
         shift_wo_swap(a_list, index)
