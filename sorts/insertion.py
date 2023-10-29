@@ -35,6 +35,7 @@ def insertion_sort_wo_swap(a_list):
 def main():
     test = [2, 3, 1, 4, 7, 5, 7, 1, 2, 4, 243, 242, 2, 141, 34, 134, 12, 34, 66]
     print(test)
+    
     swap(test, 2, 3)
     print(test)
     

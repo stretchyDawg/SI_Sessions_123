@@ -37,7 +37,12 @@ def merge_sort(a_list):
         return result
 
 def main():
-    pass
+    test = [2, 3, 1, 4, 7, 5, 7, 1, 2, 4, 243, 242, 2, 141, 34, 134, 12, 34, 66]
+    print(test)
+    sorted_test = merge_sort(test)
+    print(sorted_test
+          
+          )
 
 if __name__ == "__main__":
     main()
