@@ -1,4 +1,6 @@
 """
+MAKES USE OF LISTS AND TUPLES
+
 STORING ALBUMS USING DATA STRUCTURES:
 You are given this CSV file of an album (note that the second line is the title of the album and the full length of the album):
 Title,Length
