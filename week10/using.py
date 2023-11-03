@@ -74,8 +74,6 @@ def using_dicts():
     empty2[9] = "Christian"
     print(empty2)
         
-    
-
 def main():
     print("\n-- Using Sets --")
     using_sets()
