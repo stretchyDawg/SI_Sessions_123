@@ -1,7 +1,7 @@
 """
 Spotify Assignment
 @ChristianMorgado Spring Semester 23
-<<Uses Dictionaries, Sets, Lists and Tuples>
+<Uses Dictionaries, Sets, Lists and Tuples>
 
 PROMPTS (what I will send them in the discord):
 Using your knowledge of lists and tuples, you will be programming Spotify in Python!
