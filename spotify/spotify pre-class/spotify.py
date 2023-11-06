@@ -4,13 +4,17 @@ SPOTIFY (pt1):
 
 For this session we will be coding Spotify in Python! For all of these questions you can use the Spotify app as a reference for how things should be done (if your confused on what the program should look like, turn to the Spotify app).
 
-If the instructions don't specify which parameters or data structures to use, that means it is up to you to choose. 
--	1: Create an implementation of a song entry represented by some data structure. To do this you will make a create_song() function. We will discuss the parameters!
--	2: Create an implementation of a playlist, which is some collection of songs. When you first create a playlist, you must insert 3 songs. To do this you will make a create_playlist() function.
--	3.1: For the playlist, create an add_song(playlist, song) function that adds a given song to a given playlist.
+If the instructions don't specify which parameters or data structures to use, that means it is up to you to choose. If the instructions DO specify parameters, you can add more if you like also.
+-	1: Create an implementation of a song entry represented by some data structure. To do this you will make a create_song() function. 
+    -   What properties does each user have?   
+    -   What should the parameters be?
+    -   What data structure should I store this in, or should I even use a data structure to store it?
+-	2: Create an implementation of a playlist, which is some collection of songs. To do this you will make a create_playlist() function.
+    -   Think... what properties do playlists in Spotify have?
+-	3.1: For the playlist, create an add_song(playlist, song) function that adds a given song to a given playlist (you can add more parameters if you need).
 -	3.2: For the playlist, create a remove_song(playlist) function that removes a song from a given playlist.
--	4: For the playlist, make a get_runtime(playlist) function that returns the total runtime of a given playlist.
--	5: For the playlist, create a search(playlist, name) function that searches for a song, given its name, in a given playlist. Return a Boolean representing if its found or not.
+-	4: For the playlist, make a get_runtime(playlist) function that returns the total runtime (in seconds) of a given playlist.
+-	5: For the playlist, create a search(playlist, name) function that searches for a song, given its name, in a given playlist. Return some indication that you found the song.
 -	6: Create an implementation for a user represented by some data structure. A users properties consists of a name and a collection of playlists. To do this you will make a create_user(name, playlists) function.
     -   Something to think about... when you make a Spotify account, what playlist does EVERY user have?
 -	7.1: For the user, create an add_playlist(user, playlist) function that adds a given playlist to a given users collection of playlists.
