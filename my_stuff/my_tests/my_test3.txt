@@ -52,9 +52,7 @@ unique books of that genre (which is passed to the function
 as a parameter).
 
 
-
-
-5.1: COMMUNE SKILL ASSIGNMENT
+6.1: COMMUNE SKILL ASSIGNMENT
 Iterate through a CSV file of workers in a commune in this form:
 name, age, skill1, skill2, skill3, proficiency
 
@@ -62,7 +60,7 @@ Return a collection of tuples of workers in this form:
 (name, age, proficiency, collection of skills)
 MUST BE EXACTLY IN THIS FORM ^
 
-5.2: COMMUNE JOB ASSIGNMENT 
+6.2: COMMUNE JOB ASSIGNMENT 
 Given this collection of tuples, return a dictionary
 representing workers in this form:
 {proficiency : collection of workers (as tuples)}
