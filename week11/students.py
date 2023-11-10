@@ -12,7 +12,6 @@ class Student:
     # courses = []   # If you do this then EVERY student will have the same courses because it is a static (GLOBAL) variable for ALL students.
 
     def __init__(self, id, name):
-        
         self.id = id
         self.name = name
         self.gpa = 0.0
