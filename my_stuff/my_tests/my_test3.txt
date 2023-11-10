@@ -7,17 +7,42 @@ Given two sets, write a function that returns the intersection of
 those two sets.
 
 
-2: HIGHEST GRADE
+2: WORDS BY THE LETTER 
+Create a function words_by_the_letter(a_string) that takes in a string. 
+Return a dictionary that, given a letter as a key, returns some 
+collection of the words in the string that BEGIN with that letter. 
+
+For example, given:
+a_string: "SI stands for Supplemental Instruction"
+
+The function would return:
+"s" : "SI", "stands", "Supplemental"
+"f" : "for"
+"i" : "Instruction"
+
+
+3: WORD DICTIONARY
+Given a filename to a text file, return a dictionary of each 
+word and its word count in this key/value form:
+{Word : Word Count}
+
+The words are NOT case sensitive (i.e. 'The' and 'the' are the
+same thing.)
+
+
+4: HIGHEST GRADE
 Write a Python function that takes in a list of tuples, 
 where each tuple represents a student's name and their 
 final grade in a course. The function should return the 
 name of the student with the highest grade. 
 
 For example, if the input list is: 
-[('Alice', 85), ('Bob', 92), ('Charlie', 77)], the function should return 'Bob'.
+[('Abe', 85), ('Alice', 92), ('Christian', 77)]
+
+The function should return 'Alice'.
 
 
-3: BOOK GENRE SEARCH
+5: BOOK GENRE SEARCH
 Write a Python function that takes in a list of tuples 
 representing books in this form: 
 (name, author, genre)
@@ -27,16 +52,7 @@ unique books of that genre (which is passed to the function
 as a parameter).
 
 
-4: WORD DICTIONARY
-Given a filename to a text file, return a dictionary of each 
-word and its word count in this key/value form:
-{Word : Word Count}
-
-The words are NOT case sensitive (i.e. 'The' and 'the' are the
-same thing.)
-
-
-5.1: COMMUNE SKILL ASSIGNMENT
+6.1: COMMUNE SKILL ASSIGNMENT
 Iterate through a CSV file of workers in a commune in this form:
 name, age, skill1, skill2, skill3, proficiency
 
@@ -44,7 +60,7 @@ Return a collection of tuples of workers in this form:
 (name, age, proficiency, collection of skills)
 MUST BE EXACTLY IN THIS FORM ^
 
-5.2: COMMUNE JOB ASSIGNMENT 
+6.2: COMMUNE JOB ASSIGNMENT 
 Given this collection of tuples, return a dictionary
 representing workers in this form:
 {proficiency : collection of workers (as tuples)}
