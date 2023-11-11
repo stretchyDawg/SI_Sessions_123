@@ -4,7 +4,7 @@ class Song:
     def __init__(self, name, author, length):
         self.name = name # string
         self.author = author # string
-        self.length = length # length
+        self.length = length # int
 
 def hash_song(song):
     """
