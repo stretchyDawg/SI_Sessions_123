@@ -2,40 +2,41 @@ import csv
 
 def union(set1, set2):
     """
-    1.1: SET THEORY - UNION
+    SET THEORY - UNION
     Given two sets, write a function that returns the union of
     those two sets.
     """
-    set3 = set()
+    return_set = set()
     for val in set1:
-        set3.add(val)
+        return_set.add(val)
     for val in set2:
-        set3.add(val)
-    return set3
+        return_set.add(val)
+    return return_set
 def intersection(set1, set2):
     """
-    1.2: SET THEORY - INTERSECTION
+    SET THEORY - INTERSECTION
     Given two sets, write a function that returns the intersection of
     those two sets.
     """
-    set3 = set()
+    return_set = set()
     for val1 in set1:
         for val2 in set2:
             if val1 == val2:
-                set3.add(val1)
+                return_set.add(val1)
                 break
-    return set3
+    return return_set
 
 def highest_grade(grades):
     """
-    2: HIGHEST GRADE
+    HIGHEST GRADE
     Write a Python function that takes in a list of tuples, 
     where each tuple represents a student's name and their 
     final grade in a course. The function should return the 
     name of the student with the highest grade. 
 
     For example, if the input list is: 
-    [('Alice', 85), ('Bob', 92), ('Charlie', 77)], the function should return 'Bob'.
+    [('Abe', 85), ('Alice', 92), ('Christian', 77)], the 
+    function should return 'Alice'.
     """
     highest_grade = 0
     highest_name = ""
@@ -51,7 +52,7 @@ def highest_grade(grades):
 
 def genre_search(booklist, genre):
     """
-    3: BOOK GENRE SEARCH
+    BOOK GENRE SEARCH
     Write a Python function that takes in a list of tuples 
     representing books in this form: 
     (name, author, genre)
@@ -71,7 +72,7 @@ def genre_search(booklist, genre):
 
 def word_dictionary(filename):
     '''
-    4: WORD DICTIONARY
+    WORD DICTIONARY
     Given a filename to a text file, return a dictionary of each 
     word and its word count in this key/value form:
     {Word : Word Count}
@@ -92,7 +93,7 @@ def word_dictionary(filename):
 
 def skill_assignment(filename):
     """
-    5.1: COMMUNE SKILL ASSIGNMENT
+    COMMUNE SKILL ASSIGNMENT
     Iterate through a CSV file of workers in this form:
     name, age, skill1, skill2, skill3, proficiency
 
@@ -117,7 +118,7 @@ def skill_assignment(filename):
         return workers
 def job_assignment(workers):
     """
-    5.2: COMMUNE JOB ASSIGNMENT 
+    COMMUNE JOB ASSIGNMENT 
     Given this collection of tuples, return a dictionary
     representing workers in this form:
     {proficiency : collection of workers (as tuples)}
@@ -134,11 +135,35 @@ def job_assignment(workers):
 
     return job_dict
 
+def words_by_letter(str):
+    """
+    WORDS BY THE LETTER 
+    Create a function words_by_the_letter(a_string) that takes in a string. 
+    Return a dictionary that, given a letter as a key, returns some 
+    collection of the words in the string that BEGIN with that letter. 
+    """
+    letter_dict = dict()
+    if len(str) == 0:
+        return letter_dict
+    split_string = str.split(" ")
+    for word in split_string:
+        if word[0].lower() in letter_dict:
+            letter_dict[word[0].lower()].add(word)
+        else:
+            letter_dict[word[0].lower()] = set()
+            letter_dict[word[0].lower()].add(word)
+    return letter_dict
+
+
 def main():
     set1 = {1, 2, 3, 4, 5, 6, 7}
     set2 = {2, 4, 6, 8, 10, 12, 14}
     print("union:", union(set1, set2))
     print("intersection:", intersection(set1, set2))
+    
+    a_string = "SI stands for Supplemental Instruction"
+    print(words_by_letter(a_string))
+
     
 if __name__ == "__main__":
     main()

@@ -61,7 +61,6 @@ def words_by_letter(str):
     """
     Returns a dictionary that ties each unique word as a value to the letter that starts them as a key.
     """
-    str = str.lower()
     letter_dict = dict()
     if len(str) == 0:
         return letter_dict
@@ -83,11 +82,10 @@ def main():
     # for key in sorted_keys:
     #     print(key, ":", answer_dict[key])
 
-    str = "I have 17 farts to make, and I's'a GONNA. DO? EM? NOW!!!!"
-    print(str)
-    str = re.findall("[a-zA-Z]", str)
-    print(str)
-    return
+    a_string = "SI stands for Supplemental Instruction"
+    print(words_by_letter(a_string))
+    
+
 
 if __name__ == "__main__":
     main()
