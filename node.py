@@ -7,19 +7,31 @@ class Node:
 
     def get_value(self):
         return self.__value
+    def set_value(self, value):
+        self.__value = value
 
     def get_next(self):
         return self.__next
-
     def set_next(self, next):
         self.__next = next
+        
+    def length(self):
+        length = 0
+        while node is not None:
+            node = node.get_next()
+            length += 1
+        return length
+        
+    def __str__(self):
+        return str(self.__value) + " -> " + str(self.__next)
 
+# made in 2022, highlights the recursive nature of the str function above (2023 class had better methods, shown above)
 def print_node(node):
     if node is None:
         print(None)
     else:
         value = node.get_value()
-        print(str(value), "-> ", end = "")   # GET RID OF END TO PRINT NICELY ON ONE LINE
+        print(str(value), "-> ", end = "") 
         print_node(node.get_next())
 
 def length(node):
@@ -53,6 +65,7 @@ def main():
     print_node(node_g)
     print(length(node_g))
 
+    print(node_g)
 
 if __name__ == "__main__":
     main()
