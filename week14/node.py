@@ -17,14 +17,15 @@ class Node:
         
     def length(self):
         length = 0
-        while node is not None:
-            node = node.get_next()
+        while self is not None:
+            self = self.get_next()
             length += 1
         return length
         
     def __str__(self):
         return str(self.__value) + " -> " + str(self.__next)
 
+        
 # made in 2022, highlights the recursive nature of the str function above (2023 class had better methods, shown above)
 def print_node(node):
     if node is None:
@@ -34,6 +35,7 @@ def print_node(node):
         print(str(value), "-> ", end = "") 
         print_node(node.get_next())
 
+        
 def length(node):
     # if node is None:
     #     return 0
@@ -55,6 +57,13 @@ def length2(node, count=0):
         count += 1
         next = node.get_next()
         return length2(next, count)
+    
+def recursive_sum(node, sum=0):
+    if node is None:
+        return sum
+    else:
+        sum += node.get_value()
+        return recursive_sum(node.get_next(), sum)
 
 def main():
     node_a = Node("a")           # None
@@ -71,10 +80,29 @@ def main():
     print_node(node_f)    
     node_g = Node("g", node_f)   # f -> e -> d -> c -> b -> a -> None
     print_node(node_g)
+    print(node_g)
     print(length(node_g))
     print(length2(node_g))
 
-    print(node_g)
+    print()
+    sequence = Node(1, Node(2, Node(3)))
+    print(sequence)
+    print(sequence.length())
 
+    print()
+    sequence = Node(6)
+    print(sequence)
+    sequence = Node(13, sequence)
+    print(sequence)
+    sequence = Node(11, sequence)
+    print(sequence)
+    sequence = Node(7, sequence)
+    print(sequence)
+    sequence = Node(5, sequence)
+    print(sequence)
+    print(sequence.length())
+    print(6 + 13 + 11 + 7 + 5)
+    print(recursive_sum(sequence))
+    
 if __name__ == "__main__":
     main()
