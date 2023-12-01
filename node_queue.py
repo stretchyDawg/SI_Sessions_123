@@ -15,8 +15,6 @@ class NodeQueue:
     def is_empty(self):
         return self.__size == 0
 
-    
-
     def __repr__(self):
         string = '['
 
