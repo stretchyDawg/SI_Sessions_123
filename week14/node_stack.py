@@ -56,6 +56,9 @@ class NodeStack:
         string += ']'
         return string
     
+    def __len__(self):
+        return self.__size
+    
 def main():
     stack = NodeStack()
     print(stack)
