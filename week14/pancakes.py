@@ -1,4 +1,3 @@
-import random
 import node_stack
 
 class Pancake:
