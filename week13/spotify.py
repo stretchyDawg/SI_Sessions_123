@@ -14,8 +14,8 @@ class Time:
     def get_seconds(self):
         return self.__seconds
         
-    def get_time_as_string(time):
-        return '{}:{:02}:{:02}'.format(time.__hours, time.__minutes, time.__seconds)
+    def __str__(self):
+        return '{}:{:02}:{:02}'.format(self.__hours, self.__minutes, self.__seconds)
 
 
 class Song:
