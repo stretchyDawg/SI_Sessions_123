@@ -32,7 +32,7 @@ class Song:
         return self.__duration
     
     def __str__(self):
-        return str(self.__name) + " by " + str(self.__author) + ": " + str(self.__duration)
+        return "'" + str(self.__name) + "' by " + str(self.__author) + ": " + str(self.__duration)
     
 def main():
     time_a = Time(0, 2, 21)
@@ -42,3 +42,32 @@ def main():
     
 if __name__ == "__main__":
     main()
+    
+    
+class Playlist:
+    __slots__ = ["__name", "__songs", "__author"]
+
+    def __init__(self, name, author):
+        self.__name = name
+        self.__author = author
+        self.__songs = []
+        
+    def getSongs(self):
+        return self.__songs
+
+    def addSong(self, song):
+        self.__songs.append(song)
+
+    def removeSong(self, song):
+        for index in range(len(self.__songs)):
+            if song == self.__songs[index]:
+                self.__songs.pop(index)
+                break
+
+    def __str__(self):
+        string = "name: " + self.__name + "\nAuthor: " + self.__author + "\n["
+        for index in range(len(self.__songs)):
+            string += str(self.__songs[index])
+            if(index != len(self.__songs)-1):
+                string += ", "
+        return string + "]\n"

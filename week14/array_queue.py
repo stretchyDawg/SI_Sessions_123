@@ -8,7 +8,7 @@ class Queue:
         self.__size = 0
         self.__front = 0
         self.__back = 0
-        self.__array = arrays.Array(4)
+        self.__array = arrays.Array(100)
 
     def size(self):
         return self.__size
