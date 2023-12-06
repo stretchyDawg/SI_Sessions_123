@@ -31,6 +31,9 @@ class Song:
     
     def __str__(self):
         return "'" + str(self.__name) + "' by " + str(self.__author) + ": " + str(self.__duration)
+    def __repr__(self):
+        return "'" + str(self.__name) + "' by " + str(self.__author) + ": " + str(self.__duration)
+        
     
 def main():
     time_a = Time(0, 2, 21)
