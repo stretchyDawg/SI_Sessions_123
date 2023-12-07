@@ -1,5 +1,8 @@
 import csv
 import song
+import node_stack
+import array_queue
+# If your array_queues or node_stacks don't work, feel free to send me a message and I'll send you my implementation :)
 
 """
 BACK TO CSV FILES
@@ -22,26 +25,37 @@ def csv_songs(filename):
             author = record[3]
             songs.append(song.Song(title, author, song.Time(time[0], time[1], time[2])))
     return songs
-          
   
 print("\n", csv_songs("week15/songs.csv"), sep = "")
             
 
-
 """
-LETS FINALLY MAKE AN ALBUM
-Create an Album class that takes in 3 parameters in its constructor, a Name, an Author, and a filename.
-The Album class should have these properties:
-- Name
-- Author
-- Songs
-- Total Runtime
-
-Using the same csv file as before, go through the file and take every song that matches the author and album name, 
-SERIALIZE it to a Song class, and add it to the collection of songs in the album.
+PALINDROME:
+Create a is_palindrome() function that takes in a string. Use stacks and queues to return a string representing whether 
+the given string is a palindrome or not. Should not be case sensitive (i.e. "Radar" and "radar" should both return True).
 """
 
-"""
-Maybe make a dictionary that ties each album to its songs???????
-"""
+def is_palindrome(string):
+    string = string.lower()
+    
+    stack = node_stack.Stack()
+    queue = array_queue.Queue()
+    
+    for char in string:
+        stack.push(char)
+        queue.enqueue(char)
+        
+    while not stack.is_empty() or not queue.is_empty():
+        # Uncomment these to see the stacks and queues in action
+        # print("Stack:", stack)
+        # print("Queue:", queue)
+        if stack.pop() != queue.dequeue():
+            return False
+    return True
+
+print(is_palindrome("Radar"))
+print(is_palindrome("radar"))
+print(is_palindrome("Mya"))
+
+            
 
