@@ -1,3 +1,17 @@
+"""
+PANCAKES!!!!! (the best breakfast food) PART 1
+1: Make a Pancake class. Pancakes have a weight (in pounds) and a topping. 
+2: A pancake is equal to another pancake if it is the same type and its weight is the same.
+3: A pancake is less than another pancake if its weight is less than the other pancake's weight. If they are the same then order them alphabetically.
+4: Pancakes should be able to be put in sets… :)
+
+PANCAKES!!!! (the best breakfast food) PART 2
+1: Make a Pancakes class (notice the plurality). Find some data structure to store a collection of pancakes. There is also a total_weight field for the pancakes class.
+2: Make an eat_pancake() method and a add_pancake() method. When eating, what should happen when there’s no pancakes left?
+3: Make a get_total_weight() method. 
+4: A collection of pancakes is less than another collection of pancakes if its total weight is less than the other’s total weight. 
+"""
+
 import node_stack
 
 class Pancake:
