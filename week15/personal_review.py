@@ -56,6 +56,3 @@ def is_palindrome(string):
 print(is_palindrome("Radar"))
 print(is_palindrome("radar"))
 print(is_palindrome("Mya"))
-
-            
-
