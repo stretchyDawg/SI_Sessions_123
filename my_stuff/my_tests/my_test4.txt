@@ -5,8 +5,8 @@ these problems, and also work together on this problem, it will benefit you more
 
 We will go over it together afterward... good luck!
 
-PAPAS PANCAKERIA:
 
+PAPAS PANCAKERIA:
 
 1: A Pancake is a food (..duh). There are multiple types on pancakes (chocolate chip, blueberry, raspberry, 
 etc...). Pancakes also have a weight (in lbs) and a price (as a float). A pancake is less than another pancake 
@@ -35,71 +35,19 @@ Requirements:
 - There should be a method that returns the total price of the order 
 - There should be a method that returns the total weight. 
 - There should be a __str__ method that returns the data in this format:
-    Order:
-        1 x Blueberry Pancake
-        2 x Rasberry Pancake
+    1 x Blueberry Pancake
+    2 x Raspberry Pancake
     Total cost: xxxlbs
     Total weight: $xxx
 
 
+3: A Pancakeria is a restaurant that takes in orders. They take in orders in first-come-first-serve manner (you can simply 
+pass in these orders in the main function when making a Pancakeria instance). They serve pancakes in an 'eatable' fashion. 
+Pancakes are eaten from the top down. After creating your __init__ function, provide these functionalities:
+- A print_next_order method that prints the next order in this format:
+    Next Order:
+        <next order information>
+- A serve pancake method that returns the pancakes requested from the order next in line in an 'eatable' fashion (pancakes 
+are eaten from the top down)
 
-
-3: 
-
-
-
-
-
-
-2. Toy collectors often keep their toys in the original packaging to keep it
-   safe and in mint condition. They also like to sort their toys in some way. 
-   Update your toy capsule class so that toy capsules can be arranged in 
-   alphabetical order based on the kind of toy of the capsule. If the sequence 
-   contains more than one of the same kind of toy, they should be sorted by 
-   color. For example, an Orange capsule would be sorted before a Red capsule 
-   if they both contain the same kind of toy.
-
-3. A toy capsule dispenser is a simple mechanical device often found outside of
-  retail establishments like toy stores or grocery stores. Customers insert 
-  coins and turn a crank to dispense toy capsules one at a time. See the 
-  provided image for a reference. Toy capsule dispensers have the following 
-  attributes:
-  - balance i.e. the amount of money that has been inserted into the machine 
-    in whole dollars.
-  - capsules i.e. the collection of capsules that the machine will dispense.
-
-  Create a Python class that represents a toy capsule dispenser. It must 
-  include the following features:
-  - As always, use proper encapsulation for all attributes.
-  - A toy capsule dispenser is initialized with a $0 balance and is empty (it
-    does not contain any toy capsules). You should choose the best data 
-    structure to store the capsules.
-  - An accessor for the current balance.
-  - A method named "is_empty" that returns True if the dispenser is empty (it
-    does not contain any toy capsules) and False otherwise.
-  - A method named "reload" that declares a parameter for a collection of toy
-    capsules and COPIES the capsules into the dispenser. DO NOT use the data 
-    structure that is passed into the method to store the toy capsules in the
-    dispenser!
-  - A method named "dispense" that adds $1 to the balance and removes and 
-    returns one of the toy capsules in the dispenser. For 5 bonus points raise
-    a ValueError if the dispenser is empty. 
-
-4. Toy collectors are often interested in collecting one of each new toy 
-   available from a dispenser. Therefore, two toy capsules are considered equal
-   if they contain the same kind toy, regardless of color. For example, a Red 
-   toy capsule containing a Superball would be considered equal to a Blue toy 
-   capsule that also contained a Superball. If a collector gets two of the same
-   toy from a dispenser, they will only keep one (and discard or sell the 
-   other).
-
-   Define a new function named "collect_toys" that declares a parameter for a
-   dispenser and dispenses toys until the dispenser is empty. Return a 
-   collection of the unique toy capsules dispensed by the dispenser. 
-   
-   Your function MUST run in linear time to receive credit for this problem. 
-   You will need to add functionality to your toy capsule class to solve this 
-   problem.
-
-
-
+4: <inputting orders from files>

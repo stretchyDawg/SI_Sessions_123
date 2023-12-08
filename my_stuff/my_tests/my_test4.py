@@ -60,6 +60,7 @@ BLUEBERRY_PANCAKE = Pancake("Blueberry", 1.6, 6)
 RASPBERRY_PANCAKE = Pancake("Raspberry", 1.4, 6)
 NUTELLA_PANCAKE = Pancake("Nutella", 4.4, 10)
 
+
 class Order:
     __slots__ = ["__requests"]
     
@@ -87,15 +88,27 @@ class Order:
         string += "Total Weight: " + str(self.get_total_weight()) + "lbs"
         string += "\nTotal Price: $" + str(self.get_total_price())
         return string
+    
+    
+class Pancakeria:
+    __slots__ = ["__orders"]
+    
+    def __init__(self, orders):
+        self.__orders = orders
+        
+    def servePancake(self):
+        pass
+        
 
 def main():
     """
     Use this function to manually test your code (if needed)
     """
-    
     order1 = Order({2:BLUEBERRY_PANCAKE, 1:NUTELLA_PANCAKE})
-    
     print(order1)
+    
+    
+    
     # order1.get_total_weight()
 
 if __name__ == "__main__":
