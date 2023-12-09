@@ -19,7 +19,7 @@ def csv_songs(filename):
     with open(filename) as file:
         csv_reader = csv.reader(file)
         for record in csv_reader:
-            print(record)
+            # print(record)
             title = record[0]
             time = record[1].split(":")
             author = record[3]
@@ -27,6 +27,7 @@ def csv_songs(filename):
     return songs
   
 print("\n", csv_songs("week15/songs.csv"), sep = "")
+# I know im not using main() functions... this is just for testing purposes, you should always use a main() function
             
 
 """
@@ -34,8 +35,10 @@ PALINDROME:
 Create a is_palindrome() function that takes in a string. Use stacks and queues to return a string representing whether 
 the given string is a palindrome or not. Should not be case sensitive (i.e. "Radar" and "radar" should both return True).
 """
-
 def is_palindrome(string):
+    """
+    Main thing to take note here is how I am treating the Stacks and Queues as if they were any other data structure.
+    """
     string = string.lower()
     
     stack = node_stack.Stack()
