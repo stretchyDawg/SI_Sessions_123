@@ -65,15 +65,17 @@ SpotifyQueue functionality:
     -  Should be able to add songs to the queue
     -  Should be able to play songs
     -  Should be able to skip songs
+    -  Should be able to clear the queue
+        - Essentially emptying the queue
     -  Should have a __str__ function that portrays the queue in a readable format
         - Hint: It's easier than you think, the node_queue implementation basically does this for you
     -  Should be able to add playlists/albums to the queue
         - (you pass in an album or playlist and it adds every song to that on the queue)
-    - Should be able to clear the queue
-        - Essentially emptying the queue
     -  Should be able to go back to old songs
         - (this is REALLY hard, like way harder than anything they'd ask you on the test, if you want you 
            could try to answer it by commenting what you would do) 
+           
+    If all of the functionaloty above is overwhelming, do each functionality in order before reading the next one.
            
 """
 class Time:
