@@ -37,8 +37,8 @@ Requirements:
 - There should be a __str__ method that returns the data in this format:
     1 x Blueberry Pancake
     2 x Raspberry Pancake
-    Total cost: xxxlbs
-    Total weight: $xxx
+    Total cost: <amount>lbs
+    Total weight: $<amount>
 
 
 3: A Pancakeria is a restaurant that takes in orders. They take in orders in first-come-first-serve manner (you can simply 
