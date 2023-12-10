@@ -9,8 +9,8 @@ We will go over it together afterward... good luck!
 PAPAS PANCAKERIA:
 
 1: A Pancake is a food (..duh). There are multiple types on pancakes (chocolate chip, blueberry, raspberry, 
-etc...). Pancakes also have a weight (in lbs) and a price (as a float). A pancake is less than another pancake 
-if its weight is less than the other pancake's weight. If their weight is the same then order them alphabetically. 
+etc...). Pancakes also have a weight (in lbs, as a float) and a price (as a float). A pancake is less than another 
+pancake if its weight is less than the other pancake's weight. If their weight is the same then order them alphabetically. 
 Pancakes should be able to be put in sets… (if you are confused on what this means then ask your peers or the SIs 
 for some help). If it helps you for manual testing, create some __str__ or __repr__ methods.
 
@@ -21,7 +21,14 @@ RASPBERRY_PANCAKE = Pancake(...)
 NUTELLA_PANCAKE = Pancake(...)
 ...
 
-If these examples are confusing feel free to ask for clarification.
+When making your pancakes, follow some standards when making prices (this is required for #4):
+Plain Pancake: $2.50
+Blueberry Pancake: $3.00
+Mini Pancake: $1.50
+Nutella Pancake: $5.50
+Any other pancake: $4.00
+
+If these examples/instructions are confusing feel free to ask for clarification.
 
 
 2: An Order contains the pancakes requested and the amount of pancakes requested. For example, an order should be able to 
@@ -50,4 +57,36 @@ Pancakes are eaten from the top down. After creating your __init__ function, pro
 - A serve pancake method that returns the pancakes requested from the order next in line in an 'eatable' fashion (pancakes 
 are eaten from the top down)
 
-4: <inputting orders from files>
+
+4: The local elementary school is having a Pancake party! They have a LOT of orders to make (10!), and instead of sending in 
+their orders in a traditional fashion, they're sending their order as one submission in as a csv file in this format:
+
+amount,type,weight
+3,Plain,1.23
+4,Plain,3.42
+2,Blueberry,5.67
+5,Nutella,1.23
+6,Plain,4.75
+1,Mini,24.9
+2,Blueberry,1.2
+3,Plain,6.8
+1,Rainbow,3.4
+4,Plain,5.6
+(for testing in the main() function, i recommend you copy this and paste it into a order.csv file, make sure there is no
+whitespace in the csv file)
+
+Make an 'order_csv(filename)' function that, based on this data, creates an Order instance with every pancake. The order should 
+print in this format (assuming you have the correct __str__ method for the Order class):
+3x Plain
+4x Plain
+2x Blueberry
+5x Nutella
+6x Plain
+1x Mini
+2x Blueberry
+3x Plain
+1x Rainbow
+4x Plain
+Total Weight: 136.85999999999999lbs #i know it looks weird, but its fine
+Total Price: $95.0
+
