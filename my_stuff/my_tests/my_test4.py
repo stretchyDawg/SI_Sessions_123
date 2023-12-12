@@ -95,7 +95,7 @@ class Order:
     __slots__ = ["__requests"]
     
     def __init__(self, requests):
-        self.__requests = requests
+        self.__requests = requests # I chose to use dictionaries: {key=Pancake : value=amount}
         
     def getRequests(self):
         return self.__requests
@@ -103,14 +103,16 @@ class Order:
     def getTotalWeight(self):
         total_weight = 0
         for pancake in self.__requests:
-            for _ in range(self.__requests[pancake]):
+            amount = self.__requests[pancake]
+            for _ in range(amount):
                 total_weight += pancake.getWeight()
         return total_weight
     
     def getTotalPrice(self):
         total_price = 0
         for pancake in self.__requests:
-            for _ in range(self.__requests[pancake]):
+            amount = self.__requests[pancake]
+            for _ in range(amount):
                 total_price += pancake.getPrice()
         return total_price
                 
@@ -121,7 +123,6 @@ class Order:
         string += "Total Weight: " + str(self.getTotalWeight()) + "lbs"
         string += "\nTotal Price: $" + str(self.getTotalPrice())
         return string
-    
     
 """
 3: A Pancakeria is a restaurant that takes in orders. They take in orders in first-come-first-serve manner. They serve pancakes in an 'eatable' fashion. 

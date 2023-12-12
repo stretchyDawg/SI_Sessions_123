@@ -76,7 +76,6 @@ SpotifyQueue functionality:
            could try to answer it by commenting what you would do) 
            
     If all of the functionaloty above is overwhelming, do each functionality in order before reading the next one.
-           
 """
 class Time:
     __slots__ = ['__hours', '__minutes', '__seconds']
